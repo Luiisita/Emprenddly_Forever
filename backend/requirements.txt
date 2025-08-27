@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+passlib[bcrypt]
+python-jose[cryptography]
+pydantic[email]
+python-dotenv
+fastapi==0.111.*
+uvicorn[standard]==0.30.*
+SQLAlchemy==2.0.*
+python-dotenv==1.0.*
+passlib[bcrypt]==1.7.*
+python-jose[cryptography]==3.3.*
+pymysql==1.1.*
