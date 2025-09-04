@@ -1,0 +1,199 @@
+/*Toda la pagina detras del cuadro*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #809fe1,#6C557a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Fondo cuadrado */
+.wrapper {
+  background: linear-gradient(to right, #6c557a #33348a);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  width: 350px;
+}
+
+.contenedor {
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #222;
+}
+ /* opciones notificaciones,idioma y demas */
+.opcion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0c2be;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.opcion span {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.opcion span img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+/* Editar perfil bton*/
+.btn-editar {
+  background: #33348a;
+  color: white;
+}
+
+/* Cerrar Sesion */
+.btn-cerrar {
+  width: 100%;
+  margin-top: 20px;
+  background: #e6d6ad;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* ON/OF */
+.switch {
+  position: center;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: center;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 15px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00c3ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Select idioma */
+select {
+  padding: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #33348a;
+  color: #fff;;
+}
+
+
+/* Barra superior */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+  background: linear-gradient(to right,  #809fe1, #6c557a);
+  height: 65px;
+  box-shadow: 0 3px 5px rgba(26, 21, 21, 0.2);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+}
+ /* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #a75151;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px; width: 24px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Activado */
+input:checked + .slider {
+  background-color: #33348a;
+}
+
+/* Bolita movida cuando está activado */
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* Texto OFF */
+.slider::after {
+  content: "OFF";
+  position: absolute;
+  left: 10px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Texto ON cuando está activado */
+input:checked + .slider::after {
+  content: "ON";
+  left: 10px;
+}
+

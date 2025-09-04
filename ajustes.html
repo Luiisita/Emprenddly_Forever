@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajustes</title>
+  <link rel="stylesheet" href="ajustes.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="contenedor">
+      <h1>AJUSTES</h1>
+
+      <!-- Editar perfil -->
+      <div class="opcion">
+        <span><img src="https://img.icons8.com/ios-filled/50/000000/user.png"/> Editar perfil</span>
+       <header class="barra-superior">
+    <img src="assets/Logo_Empren.png" alt="Logo" class="logo">
+  </header>
+
+        <button class="btn btn-editar">Editar</button>
+      </div>
+
+      <!-- Notificaciones -->
+<div class="opcion">
+  <span>
+    <img src="https://img.icons8.com/ios-filled/30/000000/appointment-reminders.png"/>
+    Notificaciones
+  </span>
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+</div>
+      <!-- Idioma -->
+      <div class="opcion">
+        <span><img src="https://img.icons8.com/ios-filled/50/000000/language.png"/> Idioma</span>
+        <select>
+          <option>Español</option>
+          <option>Inglés</option>
+          
+        </select>
+      </div>
+<!-- Administración de datos -->
+<div class="opcion">
+  <span>
+    <img src="https://img.icons8.com/ios-filled/30/000000/combo-chart.png"/>
+    Administración de datos
+  </span>
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+</div>
+
+<!-- Actualizaciones -->
+<div class="opcion">
+  <span>
+    <img src="https://img.icons8.com/ios-filled/30/000000/update-left-rotation.png"/>
+    Actualizaciones
+  </span>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+</div>
+
+
+      
+
+      <!-- Botón cerrar sesión -->
+      <button type="submit" class="btn btn-cerrar">Cerrar sesión</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+
+<!-- Botton de Editar Perfil -->
+<div id="modalPerfil" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <h2>Mi Perfil</h2>
+    <form id="formPerfil">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" value="Juan Pérez"><br><br>
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" value="juanperez@mail.com"><br><br>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" value="3001234567"><br><br>
+
+      <button type="submit" class="btn-guardar">Guardar cambios</button>
+    </form>
+  </div>
+</div>
+
+</html>
