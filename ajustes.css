@@ -23,6 +23,9 @@ body {
   text-align: center;
 }
 
+
+
+
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -128,7 +131,7 @@ select {
   justify-content: space-between;
   align-items: center;
   padding: 8px 15px;
-  background: linear-gradient(to right,  #809fe1, #6c557a);
+  background: linear-gradient(to right,  #6c557a,  #809fe1);
   height: 65px;
   box-shadow: 0 3px 5px rgba(26, 21, 21, 0.2);
   border-bottom-left-radius: 15px;
@@ -145,6 +148,8 @@ select {
   width: 60px;
   height: 30px;
 }
+
+ #809fe1, #6c557a
 
 .switch input {
   opacity: 0;
@@ -196,4 +201,15 @@ input:checked + .slider::after {
   content: "ON";
   left: 10px;
 }
+
+/* Estilo para el logo */
+.logo {
+    position: absolute;   /* Para colocarlo encima de la barra */
+    top: 2px;            /* Distancia desde arriba */
+    left: 10px;           /* Distancia desde la izquierda */
+    width: 110px;          /* Tamaño más pequeño */
+    height: auto;         /* Mantiene la proporción */
+    z-index: 1000;        /* Para que quede por encima */
+}
+
 
