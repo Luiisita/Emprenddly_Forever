@@ -9,7 +9,7 @@ app = FastAPI(title="Auth mínimo Emprenddly")
 # Crear tablas
 Base.metadata.create_all(bind=engine)
 
-# Configurar CORS (ajusta origins según tu frontend)
+# Configurar CORS 
 origins = [
     "http://localhost:5173",  # Vite
     "http://127.0.0.1:5500",  # Live Server
