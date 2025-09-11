@@ -5,8 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Editar Perfil</title>
   <link rel="stylesheet" href="perfil.css">
+  <!-- Font Awesome para los íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+  <!-- Barra superior con logo -->
+  <header class="barra-superior">
+    <img src="assets/Logo_Empren.png" alt="Logo" class="logo">
+  </header>
+
+  <!-- Menú hamburguesa -->
+  <label>
+    <input class="lineas-check" type="checkbox">
+    <div class="Lineas">
+      <span class="top_line common"></span>
+      <span class="middle_line common"></span>
+      <span class="bottom_line common"></span>
+    </div>
+
+    <div class="Menu">
+      <h1 class="menu_titulo" data-i18n="menu"> Menu </h1>
+      <ul>
+        <li><a href="#"><i class="fas fa-user"></i><span data-i18n="usuarios">Usuarios</span></a></li>
+        <li><a href="#"><i class="fas fa-clipboard-list"></i><span data-i18n="inventario">Inventario</span></a></li>
+        <li><a href="#"><i class="fas fa-cart-plus"></i><span data-i18n="ventas">Registro De Ventas</span></a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i><span data-i18n="reporteVentas">Reporte De Ventas</span></a></li>
+        <li><a href="#"><i class="fas fa-wallet"></i><span data-i18n="gastos">Registro De Gastos</span></a></li>
+        <li><a href="#"><i class="fas fa-file-invoice-dollar"></i><span data-i18n="reporteGastos">Reporte De Gastos</span></a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i><span data-i18n="ajustes">Ajustes</span></a></li>
+      </ul>
+    </div>
+  </label>
+
   <div class="contenedor">
     <h2>Mi Perfil</h2>
     <form id="formPerfil">
@@ -22,6 +53,14 @@
       <label for="usuario">Usuario:</label>
       <input type="text" id="usuario" value="juanp123"><br><br>
 
+      <!-- Contenedor de imagen opcional -->
+      <label for="imagenInput" class="image-label">
+        <img id="previewImg" 
+             src="https://via.placeholder.com/100?text=+" 
+             alt="Imagen producto" />
+      </label>
+      <input type="file" id="imagenInput" accept="image/*" onchange="cargarImagen(event)" /><br><br>
+
       <button type="submit" class="btn-guardar">Guardar cambios</button>
     </form>
 
@@ -36,8 +75,17 @@
     form.addEventListener("submit", function(e) {
       e.preventDefault();
       alert("tus cambios han sido guardados");
-      window.location.href = "perfil.html"; // redirige a Ajustes después de guardar
+      window.location.href = "perfil.html"; // redirige al Perfil después de guardar
     });
+
+    // Función para cargar y mostrar la vista previa de la imagen
+    function cargarImagen(event) {
+      const preview = document.getElementById("previewImg");
+      const archivo = event.target.files[0];
+      if (archivo) {
+        preview.src = URL.createObjectURL(archivo);
+      }
+    }
   </script>
 </body>
 </html>
