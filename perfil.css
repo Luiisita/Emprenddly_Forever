@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #809fe1,#6C557a);
+  background: linear-gradient(to right, #6C557A,#F0C2BE);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,13 +30,13 @@ form input {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  background: #6C557a;
+  background: #F0C2BE;
   border: 1px solid #000000;
   border-radius: 5px;
 }
 /* guardas cambios*/
 .btn-guardar {
-  background-color: #4CAF50;
+  background-color: #809fe1;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -50,7 +50,7 @@ form input {
   display: inline-block;
   margin-top: 15px;
   text-decoration: none;
-  background: #2196F3;
+  background: #809fe1;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;

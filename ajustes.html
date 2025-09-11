@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Ajustes</title>
-  <link rel="stylesheet" href="ajustes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="ajustes.css">
+    <title>Document</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="contenedor">
-      <h1>AJUSTES</h1>
+     <header class="barra-superior">
+        <img src="assets/Logo_Empren.png" alt="Logo" class="logo">
+    </header>
+    
+    <label>
+        <input class="lineas-check" type="checkbox">
+        <div class="Lineas">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
 
-      <!-- Editar perfil -->
-      <div class="opcion">
-        <i class="fas fa-user"></i>
-       <span><img src="https://img.icons8.com/ios-filled/50/000000/user.png"/> Editar perfil</span>
-       <header class="barra-superior">
-        
-    <img src="assets/Logo_Empren.png" alt="Logo" class="logo">
-  </header>
-<a href="perfil.html" class="btn-editar">Editar perfil</a>
+        <div class="Menu">
+            <h1 class="menu_titulo" data-i18n="menu"> Menu </h1>
+            <ul>
+                <li><a href="#"><i class="fas fa-user"></i><span data-i18n="usuarios">Usuarios</span></a></li>
+                <li><a href="#"><i class="fas fa-clipboard-list"></i><span data-i18n="inventario">Inventario</span></a></li>
+                <li><a href="#"><i class="fas fa-cart-plus"></i><span data-i18n="ventas">Registro De Ventas</span></a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i><span data-i18n="reporteVentas">Reporte De Ventas</span></a></li>
+                <li><a href="#"><i class="fas fa-wallet"></i><span data-i18n="gastos">Registro De Gastos</span></a></li>
+                <li><a href="#"><i class="fas fa-file-invoice-dollar"></i><span data-i18n="reporteGastos">Reporte De Gastos</span></a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i><span data-i18n="ajustes">Ajustes</span></a></li>
+            </ul>
+        </div>
+    </label>
+
+        <div>
+           <h1 class="Titulo" data-i18n="ajustes">Ajustes</h1> 
+           <hr>
+        </div>
+  
+        <div class="Container">
+           </header>
+<a href="perfil.html" class="btn-editar" data-i18n="editarPerfil">Editar perfil</a>
+
   
       </div>
 
       <!-- Notificaciones -->
-<div class="opcion">
+<div class="notificaciones">
   <span>
     <img src="https://img.icons8.com/ios-filled/30/000000/appointment-reminders.png"/>
-    Notificaciones
+    <span data-i18n="notificaciones">notificaciones</span>
   </span>
   <label class="switch">
     <input type="checkbox" checked>
@@ -35,18 +59,19 @@
 </div>
       <!-- Idioma -->
       <div class="opcion">
-        <span><img src="https://img.icons8.com/ios-filled/50/000000/language.png"/> Idioma</span>
-        <select>
-          <option>Español</option>
-          <option>Inglés</option>
-          
+        <span><img src="https://img.icons8.com/ios-filled/50/000000/language.png"/> <span data-i18n="idioma">Idioma</span></span>
+        <!-- Selector de idioma -->
+        <select id="selectorIdioma">
+          <option value="es">Español</option>
+          <option value="en">English</option>
         </select>
       </div>
+
 <!-- Administración de datos -->
-<div class="opcion">
+<div class="Datos">
   <span>
     <img src="https://img.icons8.com/ios-filled/30/000000/combo-chart.png"/>
-    Administración de datos
+    <span data-i18n="datos">Administración de Datos</span>
   </span>
   <label class="switch">
     <input type="checkbox" checked>
@@ -55,25 +80,82 @@
 </div>
 
 <!-- Actualizaciones -->
-<div class="opcion">
+<div class="actualizaciones">
   <span>
     <img src="https://img.icons8.com/ios-filled/30/000000/update-left-rotation.png"/>
-    Actualizaciones
+    <span data-i18n="actualizaciones">Actualizaciones</span>
   </span>
   <label class="switch">
     <input type="checkbox">
     <span class="slider"></span>
   </label>
 </div>
-
-
-      
-
       <!-- Botón cerrar sesión -->
-      <button type="submit" class="btn btn-cerrar">Cerrar sesión</button>
+      <button type="submit" class="btn btn-cerrar" data-i18n="cerrarSesion">Cerrar sesión</button>
     </div>
-  </div>
+  
+        </div>
 
-  <script src="script.js"></script>
+<!-- Script para traducciones -->
+<script>
+  const traducciones = {
+    es: {
+      menu: "Menú",
+      usuarios: "Usuarios",
+      inventario: "Inventario",
+      ventas: "Registro de Ventas",
+      reporteVentas: "Reporte de Ventas",
+      gastos: "Registro de Gastos",
+      reporteGastos: "Reporte de Gastos",
+      ajustes: "Ajustes",
+      editarPerfil: "Editar perfil",
+      notificaciones: "Notificaciones",
+      idioma: "Idioma",
+      datos: "Administración de Datos",
+      actualizaciones: "Actualizaciones",
+      cerrarSesion: "Cerrar sesión"
+    },
+    en: {
+      menu: "Menu",
+      usuarios: "Users",
+      inventario: "Inventory",
+      ventas: "Sales Record",
+      reporteVentas: "Sales Report",
+      gastos: "Expense Record",
+      reporteGastos: "Expense Report",
+      ajustes: "Settings",
+      editarPerfil: "Edit Profile",
+      notificaciones: "Notifications",
+      idioma: "Language",
+      datos: "Data Management",
+      actualizaciones: "Updates",
+      cerrarSesion: "Log out"
+    }
+  };
+
+  const selector = document.getElementById("selectorIdioma");
+
+  // 🔹 Función para aplicar idioma
+  function aplicarTraduccion(idioma) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = traducciones[idioma][key];
+    });
+    // Guardar idioma en localStorage
+    localStorage.setItem("idiomaSeleccionado", idioma);
+  }
+
+  // 🔹 Al cambiar selector
+  selector.addEventListener("change", () => {
+    aplicarTraduccion(selector.value);
+  });
+
+  // 🔹 Al cargar la página (usar idioma guardado o español por defecto)
+  window.addEventListener("DOMContentLoaded", () => {
+    const idiomaGuardado = localStorage.getItem("idiomaSeleccionado") || "es";
+    selector.value = idiomaGuardado;
+    aplicarTraduccion(idiomaGuardado);
+  });
+</script>
 </body>
 </html>
